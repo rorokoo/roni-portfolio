@@ -2,6 +2,7 @@ $(document).ready(() => {
   renderPortfolio()
   renderProjectModals()
   renderContactForm()
+  renderSpecialties()
 })
 
 function renderPortfolio() {
@@ -129,4 +130,20 @@ function openGmail(event) {
   console.log(body)
   var emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to="rorokoo@gmail.name"&su=${subject}&body=${body}`
   window.open(emailLink)
+}
+
+function renderSpecialties() {
+  var specialties = getSpecialties()
+
+  var strHTML = specialties.map(
+    (service) => `<div class="col-md-4">
+    <img src= "img/logos/${service.id}.png" width="150px"/>
+    <h4 class="service-heading">${service.title}</h4>
+    <p class="text-muted">
+     ${service.desc}
+    </p>
+  </div>`
+  )
+
+  $('.services').html(strHTML)
 }

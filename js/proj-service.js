@@ -2,7 +2,6 @@ var gProj = [
   {
     id: 'minesweeper',
     name: 'Minesweeper',
-    type: 'Game',
     title: 'careful not to step on a mine!',
     desc: 'lorem ipsum lorem ipsum lorem ipsum',
     url: 'projects/proj-minesweeper/index.html',
