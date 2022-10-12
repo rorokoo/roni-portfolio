@@ -1,0 +1,257 @@
+body {
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(57, 74, 81);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  background-color: rgb(0, 0, 0, 0.75);
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.books-container {
+  margin: 15px auto;
+}
+
+/*****************table display******************************/
+
+.table-display {
+  table-layout: fixed;
+  background-color: rgb(249, 246, 247);
+  border: 2px solid black;
+  width: 60%;
+  border-spacing: 0px;
+  margin: 0 auto;
+}
+
+.table-display th {
+  background-color: #ffe8d6;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.table-display td {
+  border: 0.2px solid black;
+  padding: 5px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.id-col {
+  width: 10%;
+}
+
+.price-col {
+  width: 10%;
+}
+
+.actions-col {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.action {
+  border: 1px solid black;
+  background-color: rgb(255, 151, 29, 0.5);
+}
+/*****************cards display**********************/
+
+.cards-display {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card-display {
+  margin-right: 15px;
+  width: 15vw;
+  height: 20vw;
+  cursor: pointer;
+}
+
+.img-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 70%;
+}
+
+.card-image {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.info {
+  font-size: 1.2vw;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.info li {
+  margin-bottom: 5px;
+}
+
+/******read-card*************/
+
+.card {
+  position: absolute;
+  display: none;
+  background: white;
+  height: 600px;
+  width: 300px;
+  z-index: 7;
+  box-shadow: 0 2px 8px rgb(0, 0, 0.25);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card.open {
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 85%;
+}
+
+.browse {
+  padding-top: 10px;
+  text-align: center;
+  flex-basis: 10%;
+}
+
+.close-button {
+  flex-basis: 5%;
+}
+
+.img-container {
+  flex-basis: 70%;
+}
+
+.read-img {
+  padding-top: 10px;
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.rating {
+  flex-basis: 10%;
+  padding-top: 15px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.book-info {
+  flex-basis: 20%;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.rating button {
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 30px;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.price {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+/**************************************/
+
+.tools {
+  margin: 0 auto;
+  display: flex;
+  width: 70%;
+  justify-content: center;
+}
+.add-book {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.add-book:hover {
+  color: blue;
+}
+
+.sort-selection {
+  margin-left: auto;
+}
+
+.search-box {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.book-search {
+  border-radius: 2rem;
+
+  width: fit-content;
+  height: 5vh;
+}
+
+.book-search::placeholder {
+  font-style: italic;
+}
+
+.switch {
+  position: fixed;
+  top: 30px;
+  right: 100px;
+}
+.display-mode-grid {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: url('img/grid-icon.png');
+  background-size: 100%;
+}
+
+.display-mode-cards {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: url('img/cards-icon.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.on {
+  background-color: lightblue;
+}

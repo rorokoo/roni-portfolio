@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Book Shop</title>
+  </head>
+  <body onload="onInit()">
+    <h1>Welcome to My Bookshop</h1>
+    <form class="search-box" onsubmit="onSetFilter(event)">
+      <label>
+        <input
+          type="text"
+          placeholder="  search by book title..."
+          class="book-search"
+        />
+      </label>
+    </form>
+    <div hidden class="overlay">fsdf</div>
+    <div class="container">
+      <div class="tools">
+        <span class="add-book" onclick="onAddBook()">📚+</span>
+        <label class="sort-selection">
+          Sort By
+          <select onchange="onSetSort(this.value)">
+            <option value="alphabet">Alphabetical Order</option>
+            <option value="min-price">Min Price</option>
+            <option value="max-rate">Max Rate</option>
+          </select>
+        </label>
+      </div>
+      <div class="books-container"></div>
+    </div>
+    <div class="card">
+      <div class="book"></div>
+      <div class="browse">
+        <button class="prev" onclick="onPrev(this)">Prev</button>
+        <button class="next" onclick="onNext(this)">Next</button>
+      </div>
+      <button class="close-button" onclick="onCloseRead()">Close</button>
+    </div>
+    <div class="switch">
+      <button class="display-mode-grid on" onclick="onTableMode(this)"></button>
+      <button class="display-mode-cards" onclick="onCardMode(this)"></button>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/book-controller.js"></script>
+  </body>
+</html>
